@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+:root {
+  --bg-clr-pr: hsl(240, 12%, 20%);
+  --bg-clr-sc: hsl(240, 21%, 13%);
+
+  --bg-clr-pr-btn: hsl(27, 47%, 47%);
+  --bg-clr-sc-btn: hsl(20, 41%, 47%);
+
+  --clr-bl: hsl(0, 0%, 20%);
+  --clr-w: hsl(0, 0%, 96%);
+  --clr-gr: hsl(40, 3%, 44%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1.2rem;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  display: grid;
+  place-content: center;
+
+  min-height: 100vh;
+
+  color: var(--clr-w);
+  background: linear-gradient(to right bottom, var(--bg-clr-pr), var(--bg-clr-sc));
+}
+
+.main, .game__section {
+  display: grid;
+  place-items: center;
+}
+
+.main__titles {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+  gap: 10rem;
+
+  padding: 1rem;
+
+  border-top: 0.2rem solid var(--clr-w);
+  border-bottom: 0.2rem solid var(--clr-w);
+
+  border-radius: 0.2rem;
+
+  color: var(--clr-w);
+}
+
+.score__section {
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+
+  padding: 0.5rem 3rem;
+  border-radius: 0.5rem;
+
+  color: var(--clr-bl);
+  background: var(--clr-w);
+}
+
+.score__title {
+  margin-bottom: 0.5rem;
+  color: var(--clr-gr);
+}
+
+.score {
+  font-size: 2rem;
+}
+
+.game__section {
+  margin-top: 2rem;
+}
+
+.game__images {
+  display: flex;
+  align-items: flex-start;
+  flex-flow: column wrap;
+  margin: 1rem;
+}
+
+.titles__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.filtered__imgs {
+  display: flex;
+}
+
+.game__section--img {
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.btn__repeat {
+  padding: 1rem 0.5rem;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  margin-top: 2rem;
+  cursor: pointer;
+
+  font: inherit;
+  color: inherit;
+
+  transition: 0.2s ease-in-out;
+
+  background: var(--bg-clr-pr-btn);
+}
+
+.btn__repeat:hover {
+  background: var(--bg-clr-sc-btn);
+}
