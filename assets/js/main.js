@@ -109,13 +109,13 @@ const gameLogic = (e, userChoice, computerChoice) => {
   || userChoice === 'scissor' && computerChoice === 'paper'
   ) {
     userScore += 10;
-    resultEl.textContent = 'You Win!';
+    resultEl.textContent = 'You Won!';
   } else if (userChoice === computerChoice) {
     resultEl.textContent = 'Tie Game!';
     formatUIOnTie();
   } else {
     userScore -= 5;
-    resultEl.textContent = 'Computer Win!';
+    resultEl.textContent = 'Computer Won!';
   }
   
   showScore();
