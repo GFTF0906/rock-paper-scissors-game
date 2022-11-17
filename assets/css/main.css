@@ -1,8 +1,10 @@
+/* Imports */
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
+/* Variables */
 :root {
   --bg-clr-pr: hsl(240, 12%, 20%);
-  --bg-clr-sc: hsl(240, 21%, 13%);
+  --bg-clr-sc: hsl(240, 24%, 11%);
 
   --bg-clr-pr-btn: hsl(27, 47%, 47%);
   --bg-clr-sc-btn: hsl(20, 41%, 47%);
@@ -12,6 +14,7 @@
   --clr-gr: hsl(40, 3%, 44%);
 }
 
+/* Reset */
 *,
 *::before,
 *::after {
@@ -20,8 +23,9 @@
   box-sizing: border-box;
 }
 
+/* General Styles */
 html {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -35,6 +39,7 @@ body {
   background: linear-gradient(to right bottom, var(--bg-clr-pr), var(--bg-clr-sc));
 }
 
+/* Classes Styles */
 .main, .game__section {
   display: grid;
   place-items: center;
@@ -89,11 +94,15 @@ body {
   margin: 1rem;
 }
 
-.titles__section {
+.images, .titles__section {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  gap: 2rem;
+}
+
+.images {
+  gap: 0.1rem;
 }
 
 .filtered__imgs {
@@ -124,4 +133,68 @@ body {
 
 .btn__repeat:hover {
   background: var(--bg-clr-sc-btn);
+}
+
+/* Responsive Styles*/
+
+@media only screen and (max-width: 280px) {
+  html {
+    font-size: 0.5rem;
+  }
+
+  .score {
+    font-size: 1.3rem;
+  } 
+
+  .game__section--img {
+    height: 65px;
+    width: 65px;
+  }
+} 
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  html {
+    font-size: 1.1rem;
+  }
+  
+  .main__titles {
+    gap: 2rem;
+  }
+
+  .score {
+    font-size: 1.5rem;
+  } 
+
+  .game__section--img {
+    height: 70px;
+    width: 70px;
+  }
+
+  .titles__section {
+    gap: 1rem;
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  html {
+    font-size: 1rem;
+  } 
+
+  .game__section--img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  html {
+    font-size: 1.3rem;
+  }
 }

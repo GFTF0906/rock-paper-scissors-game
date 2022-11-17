@@ -89,7 +89,7 @@ const showScore = () => {
 const addRepeatButton = () => {
   const btnRepeat = document.createElement('button');
   btnRepeat.classList.add('btn__repeat');
-  btnRepeat.textContent = 'Jogar Novamente';
+  btnRepeat.textContent = 'Play again';
   btnRepeat.addEventListener('click', () => window.location.reload());
 
   gameSection.append(btnRepeat);
@@ -99,9 +99,12 @@ const formatUIOnTie = () => {
   gameImgsSection.style.display = 'grid';
   gameImgsSection.style.justifyItems = 'center';
   document.querySelector('.titles__section').style.marginLeft = '2rem';
+  document.querySelector('.titles__section').style.gap = '1rem';
 };
 
 const gameLogic = (e, userChoice, computerChoice) => {
+  imgsSection.style.gap = '2rem';
+
   showChoices();
   
   if (userChoice === 'rock' && computerChoice === 'scissor'
